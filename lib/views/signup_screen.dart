@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tredly/views/login_screen.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
@@ -24,7 +25,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
         backgroundColor: Colors.transparent,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
-        }, icon: Icon(CupertinoIcons.arrow_left,color: Colors.white,)),
+        }, icon: const Icon(CupertinoIcons.arrow_left,color: Colors.white,)),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -33,7 +34,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   HeadingTwo(data: 'Welcome to Tredly',fontSize: 30,),
@@ -71,7 +72,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "Enter your Name";
+                    return "Enter your First Name";
                   }
                   return null;
                 },
@@ -101,7 +102,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "Enter your Name";
+                    return "Enter your Last Name";
                   }
                   return null;
                 },
@@ -131,7 +132,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 ),
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "Enter your Email";
+                    return "Enter your Email ID/Phone Number";
                   } else if (!value.contains('@')) {
                     return "Invalid Email";
                   }
@@ -219,9 +220,9 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    // if (_key.currentState!.validate()) {
-                    //   Navigator.push(context, MaterialPageRoute(builder: (context) => ,));
-                    // }
+                    if (_key.currentState!.validate()) {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),));
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,),

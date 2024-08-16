@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tredly/views/login_screen.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
+import '../widgets/custom_button.dart';
 
 class SingUpScreen extends StatefulWidget {
   const SingUpScreen({super.key});
@@ -218,19 +218,9 @@ class _SingUpScreenState extends State<SingUpScreen> {
               SizedBox(
                 width: double.infinity,
                 height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    if (_key.currentState!.validate()) {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),));
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,),
-                  child:  HeadingTwo(
-                    data: 'Create',
-                    color: AppColors.buttonTextColors,
-                  ),
-                ),
+                child: CustomElevatedButton(onPressed: (){
+                  Navigator.pop(context);
+                }, buttonText: 'Create'),
               ),
               const SizedBox(height: 20,),
               TextButton(onPressed: (){

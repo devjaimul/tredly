@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:tredly/views/home_screen.dart';
 import 'package:tredly/views/signup_screen.dart';
+import 'package:tredly/widgets/custom_button.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
@@ -115,19 +117,9 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 width: double.infinity,
                 height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // if (_key.currentState!.validate()) {
-                    //   Navigator.push(context, MaterialPageRoute(builder: (context) => ,));
-                    // }
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,),
-                  child:  HeadingTwo(
-                    data: 'Login',
-                    color: AppColors.buttonTextColors,
-                  ),
-                ),
+                child: CustomElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen(),));
+                }, buttonText: 'Login'),
               ),
               const SizedBox(
                 height: 20,

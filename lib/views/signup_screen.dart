@@ -182,7 +182,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
 
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                    hintText: '  Re-enter Password',
+                    hintText: ' Re-enter Password',
                     hintStyle: const TextStyle(color: Colors.white,fontWeight: FontWeight.w400),
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.white),

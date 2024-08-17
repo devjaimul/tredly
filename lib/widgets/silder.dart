@@ -21,8 +21,8 @@ class CustomSlider extends StatelessWidget {
               child: Image.asset(
                 item[index]['img'],
                 fit: BoxFit.cover,
-                height: 300, // Set a fixed height for the image
-                width: double.infinity, // Set the width to the screen width
+                height: 300,
+                width: double.infinity,
               ),
             ),
             Align(
@@ -54,7 +54,7 @@ class CustomSlider extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: 250, // Set a fixed height for the carousel
+        height: 350,
         aspectRatio: 4 / 3,
         viewportFraction: 0.8,
         initialPage: 0,

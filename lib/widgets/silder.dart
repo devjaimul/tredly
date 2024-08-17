@@ -54,7 +54,7 @@ class CustomSlider extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: 350,
+        height: 250,
         aspectRatio: 4 / 3,
         viewportFraction: 0.8,
         initialPage: 0,

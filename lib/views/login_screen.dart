@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tredly/views/home_screen.dart';
-import 'package:tredly/views/signup_screen.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
 import '../routes/routes_names.dart';
@@ -120,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 height: 50,
                 child: CustomElevatedButton(onPressed: (){
-                  Get.toNamed(RouteNames.homeScreen);
+                  Get.offAllNamed(RouteNames.customNavBar);
                 }, buttonText: 'Login'),
               ),
               const SizedBox(

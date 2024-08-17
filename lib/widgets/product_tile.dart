@@ -6,7 +6,10 @@ class ProductTile extends StatelessWidget {
   final String img;
   final String title;
   final String price;
-  const ProductTile({super.key, required this.img, required this.title, required this.price});
+  final double? height;
+  final double? width;
+
+  const ProductTile({super.key, required this.img, required this.title, required this.price, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,10 @@ class ProductTile extends StatelessWidget {
           children: [
             ClipRRect(
                 borderRadius: const BorderRadius.only(topRight: Radius.circular(15),topLeft: Radius.circular(15)),
-                child: Image.asset(img,fit: BoxFit.cover,)),
+                child: Container(
+                   height: height ?? null ,
+                   width: width ?? null,
+                    child: Image.asset(img,fit: BoxFit.cover,))),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(

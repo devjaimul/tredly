@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/custom_button.dart';
+import 'package:tredly/widgets/details.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
 import '../utils/app_colors.dart';
@@ -22,12 +23,11 @@ class ProductDetails extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back, color: Colors.white),
         ),
-        title:  Text(
+        title: Text(
           data,
           style: const TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
-
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
@@ -35,10 +35,21 @@ class ProductDetails extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-               CustomIconButton(onPressed: (){}, buttonText: 'Sort By', icon: Icons.filter_list,),
-               CustomIconButton(onPressed: (){}, buttonText: 'Location', icon: Icons.location_on,),
-               CustomIconButton(onPressed: (){}, buttonText: 'Category', icon: Icons.storage,),
-
+                CustomIconButton(
+                  onPressed: () {},
+                  buttonText: 'Sort By',
+                  icon: Icons.filter_list,
+                ),
+                CustomIconButton(
+                  onPressed: () {},
+                  buttonText: 'Location',
+                  icon: Icons.location_on,
+                ),
+                CustomIconButton(
+                  onPressed: () {},
+                  buttonText: 'Category',
+                  icon: Icons.storage,
+                ),
               ],
             ),
           ),
@@ -58,7 +69,19 @@ class ProductDetails extends StatelessWidget {
             ),
             itemCount: items.length,
             itemBuilder: (context, index) {
-              return ProductTile(img: items[index]['img'], title: items[index]['title'],price: items[index]['price'],);
+              return GestureDetector(
+                  onTap: () {
+                    Get.to(DetailScreen(
+                      img: items[index]['img'],
+                      title: items[index]['title'],
+                      price: items[index]['price'],
+                    ));
+                  },
+                  child: ProductTile(
+                    img: items[index]['img'],
+                    title: items[index]['title'],
+                    price: items[index]['price'],
+                  ));
             },
           ),
         ),
@@ -66,5 +89,3 @@ class ProductDetails extends StatelessWidget {
     );
   }
 }
-
-

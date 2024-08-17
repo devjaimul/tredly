@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tredly/routes/routes_names.dart';
 import 'package:tredly/routes/routes_pages.dart';
+import 'package:tredly/widgets/details.dart';
 
 
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
+
      getPages: RoutePages.routes,
-      initialRoute:RouteNames.homeScreen,
+      initialRoute:RouteNames.customNavBar,
     );
   }
 }

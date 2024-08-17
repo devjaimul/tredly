@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
@@ -24,7 +25,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: IconButton(onPressed: (){
-          Navigator.pop(context);
+          Get.back();
         }, icon: const Icon(CupertinoIcons.arrow_left,color: Colors.white,)),
       ),
       body: Padding(
@@ -219,7 +220,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 width: double.infinity,
                 height: 50,
                 child: CustomElevatedButton(onPressed: (){
-                  Navigator.pop(context);
+                  Get.back();
                 }, buttonText: 'Create'),
               ),
               const SizedBox(height: 20,),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tredly/utils/text_style.dart';
-import 'package:tredly/views/login_screen.dart';
 
+import '../routes/routes_names.dart';
 import '../utils/app_colors.dart';
 
 class Onboarding extends StatefulWidget {
@@ -126,11 +127,7 @@ class _OnboardingState extends State<Onboarding> {
                             ),
                             onPressed: () {
                               if (currentIndex == onboardingData.length - 1) {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                        const LoginScreen()));
+                                Get.toNamed(RouteNames.loginScreen);
                               } else {
                                 setState(() {
                                   currentIndex =

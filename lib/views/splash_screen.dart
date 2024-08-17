@@ -2,8 +2,9 @@ import 'dart:async';
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tredly/routes/routes_names.dart';
 
-import 'package:tredly/views/onboarding.dart';
 
 
 import '../utils/app_colors.dart';
@@ -22,10 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => const Onboarding()),
-              (route) => false);
+      Get.toNamed(RouteNames.onboarding);
     });
   }
 

@@ -35,8 +35,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  introduction_screen: ^3.1.14
+
   carousel_slider: ^5.0.0
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,15 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/categories/
+    - assets/categories/beverages/
+    - assets/categories/breadBakery/
+    - assets/categories/vegetables/
+    - assets/categories/egg/
+    - assets/categories/fruit/
+    - assets/categories/frozen/
+    - assets/categories/homeCare/
+    - assets/categories/petCare/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

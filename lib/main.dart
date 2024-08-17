@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tredly/views/home_screen.dart';
+import 'package:get/get.dart';
+import 'package:tredly/routes/routes_names.dart';
+import 'package:tredly/routes/routes_pages.dart';
 
-import 'package:tredly/views/splash_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: SplashScreen(),
-home: HomeScreen(),
+     getPages: RoutePages.routes,
+      initialRoute:RouteNames.homeScreen,
     );
   }
 }

@@ -1,9 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tredly/views/home_screen.dart';
 import 'package:tredly/views/signup_screen.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
+import '../routes/routes_names.dart';
 import '../utils/app_colors.dart';
 import '../utils/text_style.dart';
 
@@ -118,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 height: 50,
                 child: CustomElevatedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen(),));
+                  Get.toNamed(RouteNames.homeScreen);
                 }, buttonText: 'Login'),
               ),
               const SizedBox(
@@ -131,11 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               TextButton(onPressed: (){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SingUpScreen(),
-                    ));
+                Get.toNamed(RouteNames.singUpScreen);
               }, child: const HeadingTwo(data: 'Don’t have an account? Sign up'))
             ],
           ),

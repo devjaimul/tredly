@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/text_style.dart';
 
@@ -53,17 +54,17 @@ class _OnboardingState extends State<Onboarding> {
           ),
           Center(
             child: Padding(
-              padding: const EdgeInsets.all(25),
+              padding: const EdgeInsets.all(25).r,
               child: Container(
-                margin: const EdgeInsets.only(top: 150),
-                height: 700,
+                margin: const EdgeInsets.only(top: 150).h,
+                height: 700.h,
                 decoration: BoxDecoration(
-                    color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                    color: Colors.white, borderRadius: BorderRadius.circular(10).r),
                 child: Column(
                   children: [
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20).r,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -73,7 +74,7 @@ class _OnboardingState extends State<Onboarding> {
                               onboardingData[currentIndex]['description'],
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 25.sp,
                                   color: AppColors.buttonTextColors),
                             ),
                           ],
@@ -81,7 +82,7 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 20.0),
+                      padding: const EdgeInsets.only(bottom: 20).w,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -94,7 +95,7 @@ class _OnboardingState extends State<Onboarding> {
                               },
                               child: AnimatedContainer(
 
-                                margin: const EdgeInsets.all(7),
+                                margin: const EdgeInsets.all(7).r,
                                 duration: const Duration(milliseconds: 300),
                                 height: 8,
                                 width: currentIndex == index ? 20 : 8,
@@ -102,7 +103,7 @@ class _OnboardingState extends State<Onboarding> {
                                   color: currentIndex == index
                                       ? AppColors.primaryColor
                                       : AppColors.primaryColor.withOpacity(0.5),
-                                  borderRadius: BorderRadius.circular(50),
+                                  borderRadius: BorderRadius.circular(50).r,
                                 ),
                               ),
                             );
@@ -114,16 +115,16 @@ class _OnboardingState extends State<Onboarding> {
                       height: 40,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20).w,
                       child: SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.primaryColor,
                               padding: const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 40),
+                                  vertical: 15, horizontal: 40).r,
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50)),
+                                  borderRadius: BorderRadius.circular(50).r),
                             ),
                             onPressed: () {
                               if (currentIndex == onboardingData.length - 1) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
@@ -75,9 +76,9 @@ class PopularProductTiles extends StatelessWidget {
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0).r,
       child: SizedBox(
-        height: 300,
+        height: 300.h,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: items.length,
@@ -88,8 +89,8 @@ class PopularProductTiles extends StatelessWidget {
                 img: items[index]['img'],
                 title: items[index]['title'],
                 price: items[index]['price'],
-                height: 160,
-                width: 200,
+                height: 160.h,
+                width: 200.w,
               ),
             );
           },

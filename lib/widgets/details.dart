@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tredly/routes/routes_names.dart';
 import 'package:tredly/utils/app_colors.dart';
+import 'package:tredly/views/my_cart.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
 import '../utils/text_style.dart';
@@ -238,9 +240,11 @@ class DetailScreen extends StatelessWidget {
                         child: CustomElevatedButton(
                           onPressed: () {
                             Get.snackbar('Success',
-                                'Your order Has been Placed successfully',
+                                'Buying',
                                 colorText: Colors.white,
                                 backgroundColor: AppColors.primaryColor);
+                           Get.to(MyCart(img: img, name: title, price: price));
+
                           },
                           buttonText: 'Buy Now',
                           buttonColor: AppColors.primaryColor,

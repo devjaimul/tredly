@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/custom_button.dart';
 import 'package:tredly/widgets/details.dart';
@@ -25,13 +26,13 @@ class ProductDetails extends StatelessWidget {
         ),
         title: Text(
           data,
-          style: const TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          style:  TextStyle(
+              color: Colors.white, fontSize: 20.sp, fontWeight: FontWeight.bold),
         ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0).r,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

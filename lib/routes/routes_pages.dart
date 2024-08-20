@@ -3,6 +3,7 @@ import 'package:tredly/routes/routes_names.dart';
 import 'package:tredly/views/custom_navbar.dart';
 import 'package:tredly/views/home_screen.dart';
 import 'package:tredly/views/login_screen.dart';
+import 'package:tredly/views/my_cart.dart';
 import 'package:tredly/views/onboarding.dart';
 import 'package:tredly/views/splash_screen.dart';
 
@@ -17,5 +18,6 @@ class RoutePages {
     GetPage(name: RouteNames.singUpScreen, page: () => const SingUpScreen()),
     GetPage(name: RouteNames.homeScreen, page: () =>const HomeScreen()),
     GetPage(name: RouteNames.customNavBar, page: () =>const CustomNavbar()),
+
   ];
 }

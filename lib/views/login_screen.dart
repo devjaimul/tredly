@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
@@ -23,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
      backgroundColor: AppColors.primaryColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30).r,
         child: Form(
           key: _key,
           child: Column(
@@ -42,8 +43,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 ],
               ),
-              const SizedBox(
-                height: 50,
+               SizedBox(
+                height: 50.h,
               ),
               TextFormField(
                 cursorColor: Colors.white,
@@ -76,8 +77,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 },
               ),
-              const SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               TextFormField(
                 obscureText: _obscureText,
@@ -111,24 +112,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 },
               ),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               SizedBox(
                 width: double.infinity,
-                height: 50,
+                height: 50.h,
                 child: CustomElevatedButton(onPressed: (){
                   Get.offAllNamed(RouteNames.customNavBar);
                 }, buttonText: 'Login'),
               ),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               TextButton(onPressed: (){
 
               }, child: const HeadingTwo(data: 'Forgot your password?')),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               TextButton(onPressed: (){
                 Get.toNamed(RouteNames.singUpScreen);

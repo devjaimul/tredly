@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/details.dart';
 import 'package:tredly/widgets/product_tile.dart';
@@ -82,15 +83,15 @@ class NewProduct extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back, color: Colors.white),
         ),
-        title: const Text(
+        title:  Text(
           'New Product',
           style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 20.sp, fontWeight: FontWeight.bold),
         ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0).r,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -115,7 +116,7 @@ class NewProduct extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0).r,
         child: Expanded(
           child: GridView.builder(
             

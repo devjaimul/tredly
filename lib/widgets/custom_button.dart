@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tredly/utils/app_colors.dart';
 
 import '../utils/text_style.dart';
@@ -33,7 +34,7 @@ class CustomElevatedButton extends StatelessWidget {
       child: HeadingTwo(
         data: buttonText,
         color: textColor ?? AppColors.buttonTextColors,
-        fontSize: fontSize ?? 18,
+        fontSize: fontSize ?? 18.sp,
       ),
     );
   }
@@ -66,7 +67,7 @@ class CustomIconButton extends StatelessWidget {
         side: const BorderSide(  color:  Colors.white, width: 1),
       ),
       icon: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10,),
+        padding: const EdgeInsets.symmetric(horizontal: 10,).r,
         child: Row(
           children: [
             Icon(icon,color: Colors.white,),
@@ -74,7 +75,7 @@ class CustomIconButton extends StatelessWidget {
             HeadingTwo(
               data: buttonText,
               color: Colors.white,
-              fontSize: fontSize ?? 14,
+              fontSize: fontSize ?? 14.sp,
             )
           ],
         ),

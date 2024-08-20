@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/text_style.dart';
 import 'package:tredly/widgets/categories.dart';
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         backgroundColor: AppColors.primaryColor,
         title: const HeadingTwo(
           data: 'Groceries',
@@ -60,7 +62,7 @@ class HomeScreen extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10).r,
             child: TextFormField(
               cursorColor: Colors.white,
               keyboardType: TextInputType.emailAddress,
@@ -75,92 +77,90 @@ class HomeScreen extends StatelessWidget {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50).r,
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.white),
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50).r,
                   ),
                   errorBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.red),
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50).r,
                   ),
                   focusedErrorBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.red),
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(50).r,
                   )),
             ),
           ),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 10,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+            const CustomSlider(),
+            const Padding(
+              padding: EdgeInsets.only(left: 10, bottom: 10),
+              child: HeadingTwo(
+                data: 'Categories',
+                color: Colors.black,
               ),
-              const CustomSlider(),
-              const Padding(
-                padding: EdgeInsets.only(left: 10, bottom: 10),
-                child: HeadingTwo(
-                  data: 'Categories',
-                  color: Colors.black,
-                ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Categories(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const HeadingTwo(
+                    data: 'New Product',
+                    color: Colors.black,
+                  ),
+                  CustomElevatedButton(
+                    onPressed: () {
+                      Get.to(const NewProduct());
+                    },
+                    buttonText: 'see All',
+                    buttonColor: AppColors.primaryColor,
+                    textColor: Colors.white,
+                    borderColor: null,
+                    fontSize: 15,
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 10,
+            ),
+            const NewProductTiles(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const HeadingTwo(
+                    data: 'Popular Product',
+                    color: Colors.black,
+                  ),
+                  CustomElevatedButton(
+                    onPressed: () {
+                      Get.to(const PopularProduct());
+                    },
+                    buttonText: 'See All',
+                    buttonColor: AppColors.primaryColor,
+                    textColor: Colors.white,
+                    borderColor: null,
+                    fontSize: 15,
+                  ),
+                ],
               ),
-              const Categories(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const HeadingTwo(
-                      data: 'New Product',
-                      color: Colors.black,
-                    ),
-                    CustomElevatedButton(
-                      onPressed: () {
-                        Get.to(const NewProduct());
-                      },
-                      buttonText: 'see All',
-                      buttonColor: AppColors.primaryColor,
-                      textColor: Colors.white,
-                      borderColor: null,
-                      fontSize: 15,
-                    ),
-                  ],
-                ),
-              ),
-              const NewProductTiles(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const HeadingTwo(
-                      data: 'Popular Product',
-                      color: Colors.black,
-                    ),
-                    CustomElevatedButton(
-                      onPressed: () {
-                        Get.to(const PopularProduct());
-                      },
-                      buttonText: 'see All',
-                      buttonColor: AppColors.primaryColor,
-                      textColor: Colors.white,
-                      borderColor: null,
-                      fontSize: 15,
-                    ),
-                  ],
-                ),
-              ),
-              const PopularProductTiles(),
-            ],
-          ),
+            ),
+            const PopularProductTiles(),
+          ],
         ),
       ),
     );

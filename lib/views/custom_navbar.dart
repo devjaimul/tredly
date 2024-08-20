@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tredly/views/browse_screen.dart';
+import 'package:tredly/views/history_screen.dart';
+import 'package:tredly/views/profile.dart';
 
 import '../utils/app_colors.dart';
-import '../views/home_screen.dart';
+import 'home_screen.dart';
 
 class CustomNavbar extends StatefulWidget {
   const CustomNavbar({super.key});
@@ -16,8 +18,8 @@ class _CustomNavbarState extends State<CustomNavbar> {
     const HomeScreen(),
     const BrowseScreen(),
     Center(child: CircularProgressIndicator(color: AppColors.primaryColor,)),
-    Center(child: CircularProgressIndicator(color: AppColors.primaryColor,)),
-    Center(child: CircularProgressIndicator(color: AppColors.primaryColor,)),
+    const HistoryScreen(),
+   const ProfileScreen()
 
   ];
   int currentIndex = 0;

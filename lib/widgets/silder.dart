@@ -1,5 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 import '../utils/text_style.dart';
 import 'custom_button.dart';
@@ -21,7 +23,7 @@ class CustomSlider extends StatelessWidget {
               child: Image.asset(
                 item[index]['img'],
                 fit: BoxFit.cover,
-                height: 300,
+                height: 300.h,
                 width: double.infinity,
               ),
             ),
@@ -32,19 +34,19 @@ class CustomSlider extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const HeadingTwo(
+                     HeadingTwo(
                       data: 'Ready to deliver to\n your home',
-                      fontSize: 16,
+                      fontSize: 16.sp,
                     ),
-                    const SizedBox(
-                      height: 5,
+                     SizedBox(
+                      height: 5.h,
                     ),
                     CustomElevatedButton(
                       onPressed: () {},
                       buttonText: 'Start Shopping',
                       buttonColor: Colors.transparent,
                       textColor: Colors.white,
-                      fontSize: 14,
+                      fontSize: 14.sp,
                     ),
                   ],
                 ),
@@ -54,7 +56,7 @@ class CustomSlider extends StatelessWidget {
         );
       },
       options: CarouselOptions(
-        height: 250,
+        height: 250.h,
         aspectRatio: 4 / 3,
         viewportFraction: 0.8,
         initialPage: 0,

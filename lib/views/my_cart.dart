@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/app_colors.dart';
 import 'package:tredly/utils/text_style.dart';
+import 'package:tredly/views/payment_screen.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
 class MyCart extends StatelessWidget {
@@ -168,6 +169,7 @@ class MyCart extends StatelessWidget {
                 'Wait for payment',
                 colorText: Colors.white,
                 backgroundColor: AppColors.primaryColor);
+            Get.to(PaymentScreen());
           }, buttonText: 'Continue to Payment',textColor: Colors.white,buttonColor: AppColors.primaryColor,),
         ),
       ),

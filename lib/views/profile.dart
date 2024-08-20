@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:tredly/utils/app_colors.dart';
 
 import '../utils/text_style.dart';
@@ -52,14 +53,15 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15).r,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ListTile(
 
                   leading: Container(
-                    height: 200,
-                    width: 100,
+                    height: 200.h,
+                    width: 100.w,
                     decoration: const BoxDecoration(
                       color: Colors.transparent,
                       shape: BoxShape.circle,
@@ -69,22 +71,22 @@ class ProfileScreen extends StatelessWidget {
                       child: HeadingTwo(data: 'T'),
                     ),
                   ),
-                  title: const Column(
+                  title:  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      HeadingTwo(data: 'Tradly Team'),
-                      SizedBox(height: 4),
-                      HeadingThree(data: '+1 9998887776'),
-                      SizedBox(height: 4),
-                      HeadingThree(data: 'info@tradly.co'),
+                      const HeadingTwo(data: 'Tradly Team'),
+                      SizedBox(height: 4.h),
+                      const HeadingThree(data: '+1 9998887776'),
+                      SizedBox(height: 4.w),
+                      const HeadingThree(data: 'info@tradly.co'),
                     ],
                   ),
                 ),
                 Container(
-                  height: 230.h,
+                 // height: Get.height * .4,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15).r,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
@@ -96,7 +98,7 @@ class ProfileScreen extends StatelessWidget {
                     ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20).r,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

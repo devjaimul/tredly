@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tredly/views/browse_screen.dart';
+import 'package:tredly/views/favourite.dart';
 import 'package:tredly/views/history_screen.dart';
 import 'package:tredly/views/profile.dart';
 
@@ -45,12 +45,12 @@ class _CustomNavbarState extends State<CustomNavbar> {
                 activeIcon: Icon(Icons.home),
                 icon: Icon(Icons.home_outlined), label: "Home"),
             BottomNavigationBarItem(
-                activeIcon: Icon(Icons.search),
-                icon: Icon(Icons.search_outlined),
-                label: "Browse"),
+                activeIcon: Icon(Icons.favorite),
+                icon: Icon(Icons.favorite_border),
+                label: "Favourite"),
             BottomNavigationBarItem(
-                activeIcon: Icon(Icons.storefront_sharp),
-                icon: Icon(Icons.storefront_rounded), label: "Store"),
+                activeIcon: Icon(Icons.shopping_cart),
+                icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),
             BottomNavigationBarItem(
                 activeIcon: Icon(Icons.list_alt_outlined),
                 icon: Icon(Icons.list_alt_outlined), label: "Order History"),

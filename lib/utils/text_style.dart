@@ -19,7 +19,7 @@ class HeadingTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
-      maxLines: 2,
+      maxLines: 1,
       style: TextStyle(
         color: color ?? AppColors.textColors,
         fontSize: fontSize ??  18.sp,
@@ -28,6 +28,7 @@ class HeadingTwo extends StatelessWidget {
         decoration:isTrue==true? TextDecoration.underline:TextDecoration.none,
         overflow: TextOverflow.ellipsis,
       ),
+
     );
   }
 }

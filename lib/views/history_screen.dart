@@ -26,37 +26,40 @@ class HistoryScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              HeadingFour(data: 'Transactions'),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: HeadingThree(data: 'January 2024',backGroundColor: AppColors.primaryColor.withOpacity(0.3),color: AppColors.primaryColor,),
-              ),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                HeadingFour(data: 'Transactions'),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: HeadingThree(data: 'January 2024',backGroundColor: AppColors.primaryColor.withOpacity(0.3),color: AppColors.primaryColor,),
+                ),
 
-            ],
-          ),
-          ListView.builder(
-            itemCount: 5,
-            shrinkWrap: true,
-            primary: false,
-            itemBuilder: (context, index) {
-            return Card(
-              color: Colors.white,
-              child: ListTile(
-                leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(5).r,
-                    child: Image(image: AssetImage('assets/categories/beverages/img_5.png'))),
-                title: HeadingFour(data: 'Fruit Punch'),
-                subtitle: HeadingThree(data: '25',color: AppColors.primaryColor,),
-                trailing:index==0? CustomElevatedButton(onPressed: (){}, buttonText: 'Delivered',textColor: Colors.white,buttonColor: AppColors.primaryColor,):
-              CustomElevatedButton(onPressed: (){}, buttonText: 'Order Placed',textColor: AppColors.primaryColor,buttonColor: Colors.white,borderColor: AppColors.primaryColor,),
-              ),
-            );
-          },)
-        ],
+              ],
+            ),
+            ListView.builder(
+              itemCount: 5,
+              shrinkWrap: true,
+              primary: false,
+              itemBuilder: (context, index) {
+              return Card(
+                color: Colors.white,
+                child: ListTile(
+                  leading: ClipRRect(
+                      borderRadius: BorderRadius.circular(5).r,
+                      child: Image(image: AssetImage('assets/categories/beverages/img_5.png'))),
+                  title: HeadingFour(data: 'Fruit Punch'),
+                  subtitle: HeadingThree(data: '25',color: AppColors.primaryColor,),
+                  trailing:index==0? CustomElevatedButton(onPressed: (){}, buttonText: 'Delivered',textColor: Colors.white,buttonColor: AppColors.primaryColor,):
+                CustomElevatedButton(onPressed: (){}, buttonText: 'Order Placed',textColor: AppColors.primaryColor,buttonColor: Colors.white,borderColor: AppColors.primaryColor,),
+                ),
+              );
+            },)
+          ],
+        ),
       ),
     );
   }

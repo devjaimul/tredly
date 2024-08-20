@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/custom_button.dart';
 import 'package:tredly/widgets/details.dart';
@@ -88,10 +89,10 @@ class BrowseScreen extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back, color: Colors.white),
         ),
-        title: const Text(
+        title:  Text(
           'Browse',
           style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 20.sp, fontWeight: FontWeight.bold),
         ),
         actions: const [
           Padding(
@@ -183,7 +184,7 @@ class BrowseScreen extends StatelessWidget {
             primary: false,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 0.8,
+              childAspectRatio: 0.7,
               mainAxisSpacing: 4,
               crossAxisSpacing: 2,
             ),

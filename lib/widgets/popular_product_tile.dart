@@ -78,7 +78,7 @@ class PopularProductTiles extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0).r,
       child: SizedBox(
-        height: 300.h,
+        height: Get.height * .4,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: items.length,
@@ -89,7 +89,7 @@ class PopularProductTiles extends StatelessWidget {
                 img: items[index]['img'],
                 title: items[index]['title'],
                 price: items[index]['price'],
-                height: 160.h,
+                height: 150.h,
                 width: 200.w,
               ),
             );

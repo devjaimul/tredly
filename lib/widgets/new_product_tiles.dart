@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
@@ -75,7 +76,7 @@ class NewProductTiles extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: SizedBox(
-        height: 300,
+        height: Get.height * .4,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: items.length,
@@ -86,8 +87,8 @@ class NewProductTiles extends StatelessWidget {
                 img: items[index]['img'],
                 title: items[index]['title'],
                 price: items[index]['price'],
-                height: 160,
-                width: 200,
+                height: 150.h,
+                width: 200.w,
               ),
             );
           },

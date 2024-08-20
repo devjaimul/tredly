@@ -12,11 +12,11 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: HeadingTwo(data: 'Profile'),
+        title: const HeadingTwo(data: 'Profile'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0).r,
-            child: Row(
+            child: const Row(
               children: [
                 Icon(
                   Icons.favorite,
@@ -60,16 +60,16 @@ class ProfileScreen extends StatelessWidget {
                   leading: Container(
                     height: 200,
                     width: 100,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent,
                       shape: BoxShape.circle,
                       border: Border.fromBorderSide(BorderSide(color: Colors.white,width: 1))
                     ),
-                    child: Center(
+                    child: const Center(
                       child: HeadingTwo(data: 'T'),
                     ),
                   ),
-                  title: Column(
+                  title: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       HeadingTwo(data: 'Tradly Team'),
@@ -100,16 +100,16 @@ class ProfileScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        HeadingFour(data: 'Edit Profile'),
-                        Divider(),
-                        HeadingFour(data: 'Language & Currency'),
-                        Divider(),
-                        HeadingFour(data: 'Feedback'),
-                        Divider(),
-                        HeadingFour(data: 'Refer a Friend'),
-                        Divider(),
-                        HeadingFour(data: 'Terms & Conditions'),
-                        Divider(),
+                        const HeadingFour(data: 'Edit Profile'),
+                        const Divider(),
+                        const HeadingFour(data: 'Language & Currency'),
+                        const Divider(),
+                        const HeadingFour(data: 'Feedback'),
+                        const Divider(),
+                        const HeadingFour(data: 'Refer a Friend'),
+                        const Divider(),
+                        const HeadingFour(data: 'Terms & Conditions'),
+                        const Divider(),
                         HeadingFour(
                           data: 'Logout',
                           color: AppColors.primaryColor,

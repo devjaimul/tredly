@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-import '../utils/text_style.dart';
-import 'custom_button.dart';
+import '../../../utils/text_style.dart';
+import '../../../widgets/custom_button.dart';
 class CustomSlider extends StatelessWidget {
   const CustomSlider({super.key});
 

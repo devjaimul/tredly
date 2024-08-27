@@ -7,8 +7,8 @@ import 'package:tredly/routes/routes_names.dart';
 
 
 
-import '../utils/app_colors.dart';
-import '../utils/text_style.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/text_style.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

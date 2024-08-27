@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/text_style.dart';
 
-import '../routes/routes_names.dart';
-import '../utils/app_colors.dart';
+import '../../routes/routes_names.dart';
+import '../../utils/app_colors.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});

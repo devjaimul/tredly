@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/app_colors.dart';
 import 'package:tredly/utils/text_style.dart';
-import 'package:tredly/views/payment_screen.dart';
+
 import 'package:tredly/widgets/custom_button.dart';
+
+import '../Payment Screen/payment_screen.dart';
 
 class MyCart extends StatelessWidget {
   final String img;

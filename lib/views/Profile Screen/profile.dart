@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/app_colors.dart';
 
-import '../utils/text_style.dart';
+import '../../utils/text_style.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

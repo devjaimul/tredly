@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/utils/text_style.dart';
-import 'package:tredly/views/payment_success.dart';
+import 'package:tredly/views/Payment%20Screen/payment_success.dart';
 
-import '../utils/app_colors.dart';
-import '../widgets/custom_button.dart';
+
+
+import '../../utils/app_colors.dart';
+import '../../widgets/custom_button.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});

@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
-import '../utils/app_colors.dart';
-import 'custom_button.dart';
-import 'details.dart';
+import '../../../utils/app_colors.dart';
+import '../../../widgets/custom_button.dart';
+import '../../../widgets/details.dart';
 
 class PopularProduct extends StatelessWidget {
   const PopularProduct({super.key});

@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/custom_button.dart';
 
-import '../routes/routes_names.dart';
-import '../utils/app_colors.dart';
-import '../utils/text_style.dart';
+import '../../routes/routes_names.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/text_style.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

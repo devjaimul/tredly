@@ -3,78 +3,80 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
-import 'details.dart';
+import '../../../widgets/details.dart';
 
-class NewProductTiles extends StatelessWidget {
-  const NewProductTiles({super.key});
+class PopularProductTiles extends StatelessWidget {
+  const PopularProductTiles({super.key});
 
   @override
   Widget build(BuildContext context) {
     List items = [
       {
-        'img': 'assets/categories/beverages/img.png',
-        'title': 'Strawberry Punch',
+        'img': 'assets/categories/vegetables/img.png',
+        'title': 'Carrot',
         'price': '25',
       },
       {
-        'img': 'assets/categories/beverages/img_1.png',
-        'title': 'Lemonade',
+        'img': 'assets/categories/vegetables/img_1.png',
+        'title': 'Cabbage',
         'price': '15',
       },
       {
-        'img': 'assets/categories/beverages/img_2.png',
-        'title': 'Chocolate Bakery',
+        'img': 'assets/categories/vegetables/img_2.png',
+        'title': 'Tomato',
         'price': '10',
       },
       {
-        'img': 'assets/categories/beverages/img_3.png',
-        'title': 'Whisky',
-        'price': '22',
-      },
-      {
-        'img': 'assets/categories/beverages/img_4.png',
-        'title': 'Chocolate Bakery',
-        'price': '30',
-      },
-      {
-        'img': 'assets/categories/beverages/img_5.png',
-        'title': 'Fruit Punch',
+        'img': 'assets/categories/vegetables/img_3.png',
+        'title': 'Garlic',
         'price': '15',
       },
       {
-        'img': 'assets/categories/breadBakery/img.png',
-        'title': 'Bread Chocolate',
-        'price': '25',
-      },
-      {
-        'img': 'assets/categories/breadBakery/img_1.png',
-        'title': 'Circle Bakery',
-        'price': '15',
-      },
-      {
-        'img': 'assets/categories/breadBakery/img_2.png',
-        'title': 'Cookies',
+        'img': 'assets/categories/vegetables/img_4.png',
+        'title': 'Tomatoes',
         'price': '10',
       },
       {
-        'img': 'assets/categories/breadBakery/img_3.png',
-        'title': 'Long Bread',
+        'img': 'assets/categories/vegetables/img_5.png',
+        'title': 'Corn',
+        'price': '15',
+      },
+
+      {
+        'img': 'assets/categories/fruit/img.png',
+        'title': 'Avocado',
+        'price': '10',
+      },
+      {
+        'img': 'assets/categories/fruit/img_1.png',
+        'title': 'Banana',
         'price': '15',
       },
       {
-        'img': 'assets/categories/breadBakery/img_4.png',
-        'title': 'Donut',
-        'price': '30',
+        'img': 'assets/categories/fruit/img_2.png',
+        'title': 'Orange',
+        'price': '10',
       },
       {
-        'img': 'assets/categories/breadBakery/img_5.png',
-        'title': 'Bread',
+        'img': 'assets/categories/fruit/img_3.png',
+        'title': 'Papaya',
         'price': '15',
       },
+      {
+        'img': 'assets/categories/fruit/img_4.png',
+        'title': 'Pineapple',
+        'price': '10',
+      },
+      {
+        'img': 'assets/categories/fruit/img_5.png',
+        'title': 'Watermelon',
+        'price': '15',
+      },
+
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0).r,
       child: SizedBox(
         height: Get.height * .4,
         child: ListView.builder(

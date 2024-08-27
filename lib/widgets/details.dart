@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tredly/routes/routes_names.dart';
+
 import 'package:tredly/utils/app_colors.dart';
-import 'package:tredly/views/my_cart.dart';
+
 import 'package:tredly/widgets/custom_button.dart';
 
 import '../utils/text_style.dart';
+import '../views/Cart Screen/my_cart.dart';
 
 class DetailScreen extends StatelessWidget {
   final String img;

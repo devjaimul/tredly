@@ -5,7 +5,7 @@ import 'package:tredly/widgets/custom_button.dart';
 import 'package:tredly/widgets/details.dart';
 import 'package:tredly/widgets/product_tile.dart';
 
-import '../utils/app_colors.dart';
+import '../../../utils/app_colors.dart';
 
 class ProductDetails extends StatelessWidget {
   final String data;

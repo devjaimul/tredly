@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:tredly/views/favourite.dart';
-import 'package:tredly/views/history_screen.dart';
-import 'package:tredly/views/profile.dart';
+import 'package:tredly/views/Favourtie%20Screen/favourite_screen.dart';
 
-import '../utils/app_colors.dart';
-import 'home_screen.dart';
+
+
+
+import '../../../utils/app_colors.dart';
+import '../../Browse Screen/browse.dart';
+
+import '../../History Screen/history_screen.dart';
+import '../../Profile Screen/profile.dart';
+import '../home_screen.dart';
 
 class CustomNavbar extends StatefulWidget {
   const CustomNavbar({super.key});
@@ -16,8 +21,8 @@ class CustomNavbar extends StatefulWidget {
 class _CustomNavbarState extends State<CustomNavbar> {
   List<Widget> screen=[
     const HomeScreen(),
+     FavouriteScreen(),
     const BrowseScreen(),
-    Center(child: CircularProgressIndicator(color: AppColors.primaryColor,)),
     const HistoryScreen(),
    const ProfileScreen()
 
@@ -50,7 +55,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
                 label: "Favourite"),
             BottomNavigationBarItem(
                 activeIcon: Icon(Icons.shopping_cart),
-                icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),
+                icon: Icon(Icons.shopping_cart_outlined), label: "Browse"),
             BottomNavigationBarItem(
                 activeIcon: Icon(Icons.list_alt_outlined),
                 icon: Icon(Icons.list_alt_outlined), label: "Order History"),

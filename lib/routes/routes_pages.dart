@@ -1,13 +1,14 @@
 import 'package:get/get.dart';
 import 'package:tredly/routes/routes_names.dart';
-import 'package:tredly/views/custom_navbar.dart';
-import 'package:tredly/views/home_screen.dart';
-import 'package:tredly/views/login_screen.dart';
-import 'package:tredly/views/my_cart.dart';
-import 'package:tredly/views/onboarding.dart';
-import 'package:tredly/views/splash_screen.dart';
+import 'package:tredly/views/Home%20Screen/Navigation%20Bar/custom_navbar.dart';
+import 'package:tredly/views/Home%20Screen/home_screen.dart';
 
-import '../views/signup_screen.dart';
+import '../views/Intro Screen/login_screen.dart';
+import '../views/Intro Screen/onboarding.dart';
+import '../views/Intro Screen/signup_screen.dart';
+import '../views/Intro Screen/splash_screen.dart';
+
+
 
 
 class RoutePages {

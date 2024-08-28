@@ -61,14 +61,14 @@ class FavouriteScreen extends StatelessWidget {
                             onPressed: () {
 
                               Get.defaultDialog(
-                                title: 'Alert!!',
-                                content: const HeadingTwo(data: 'Do you want to Delete It', color: Colors.black,),
+                                title: 'Alert !!',
+                                content: const HeadingTwo(data: 'Do you want to Delete It??', color: Colors.black,),
 
                                 cancel: CustomElevatedButton(onPressed: (){
                                   Get.back();
-                                }, buttonText: 'Cancel',),
+                                }, buttonText: 'No',borderColor: Colors.black.withOpacity(0.1),),
                                 confirm: CustomElevatedButton(onPressed: (){controller.removeFromFavorite(data);
-                                Get.back();}, buttonText: "Delete",buttonColor: Colors.red,textColor: Colors.white,borderColor: Colors.transparent,)
+                                Get.back();}, buttonText: "Yes",buttonColor: Colors.red,textColor: Colors.white,borderColor: Colors.transparent,)
                               );
 
                              // controller.removeFromFavorite(data);
